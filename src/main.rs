@@ -1,7 +1,6 @@
 extern crate uptime_lib;
 
 fn main() {
-
     // Constants
     let minute: f64 = 60.0;
     let day: f64 = 24.0;
@@ -10,8 +9,7 @@ fn main() {
     let utime = uptime_lib::get().expect("Failed to aquire uptime");
 
     // 64 bit float version uptime
-    let uptime = uptime.as_secs_f64();
-
+    let uptime = utime.as_secs_f64();
 
     let hours =
         ((uptime / minute / minute) - ((uptime / minute / minute / day).floor() * day)).floor();
