@@ -1,5 +1,5 @@
 [package]
-name = "UptimeBest"
+name = "up_tracker"
 version = "0.1.0"
 edition = "2021"
 
