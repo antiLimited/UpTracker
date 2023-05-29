@@ -11,12 +11,17 @@ fn main() {
     // 64 bit float version uptime
     let uptime = utime.as_secs_f64();
 
+    // Time values
     let hours =
         ((uptime / minute / minute) - ((uptime / minute / minute / day).floor() * day)).floor();
-    let mins = ((uptime / minute) - ((uptime / minute / minute).floor() * minute)).floor();
-    let seconds = ((uptime) - ((uptime / minute).floor() * minute)).floor();
-    let days = (uptime / minute / minute / day).floor();
+    let mins =
+        ((uptime / minute) - ((uptime / minute / minute).floor() * minute)).floor();
+    let seconds =
+        ((uptime) - ((uptime / minute).floor() * minute)).floor();
+    let days =
+        (uptime / minute / minute / day).floor();
 
+    // Output time values
     print!("Uptime: {} days,", days);
     print!(" {} hours,", hours);
     print!(" {} minutes,", mins);
